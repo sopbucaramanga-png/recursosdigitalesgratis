@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos Digitales Gratuitos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+    p {
+      color: #374151;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      background: #111827;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 0;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #333;
+    }
+    small {
+      color: #888;
+      font-size: 12px;
+      display: block;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎁 ¡Descarga tus Recursos Digitales Gratis!</h1>
+    <p>Ingresa tu correo y obtén nuestra guía completa de plantillas y herramientas digitales.</p>
+
+    <form action="https://formsubmit.co/sopbucaramanga@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <input type="hidden" name="_next" value="https://sopbucaramanga-png.github.io/recursosdigitalesgratis/thankyou.html">
+      <input type="hidden" name="_subject" value="🎁 Nuevo registro - Recursos Digitales Gratuitos">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">¡Descargar ahora!</button>
+    </form>
+
+    <small>Al registrarte aceptas recibir contenido educativo gratuito.</small>
+  </div>
+</body>
+</html>
