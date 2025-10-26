@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos Digitales Gratuitos para Emprendedores</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f6f8fb, #e2e8f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 40px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111827;
+  }
+  p {
+    color: #374151;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  button {
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  button:hover { background: #444444; }
+  small {
+    color: #888;
+    font-size: 12px;
+    display: block;
+    margin-top: 12px;
+  }
+</style>
+
+<!-- 🔹 Script universal MailerLite -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '1862680');
+</script>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎁 ¡Descarga tus Recursos Digitales Gratis!</h1>
+    <p>Ingresa tu correo y obtén nuestra guía completa de plantillas y herramientas digitales.</p>
+
+    <!-- 🔹 Formulario MailerLite -->
+    <form id="ml-form" onsubmit="return enviarMailerlite(this)">
+      <input type="email" name="fields[email]" placeholder="Tu correo electrónico" required>
+      <button type="submit">¡Descargar ahora!</button>
+    </form>
+
+    <small>Al registrarte aceptas recibir contenido educativo gratuito.</small>
+  </div>
+
+<script>
+  // 🔹 Función para enviar el formulario a MailerLite y redirigir
+  function enviarMailerlite(form) {
+    // Redirige a thankyou.html aunque no se complete la integración (prueba local)
+    window.location.href = 'thankyou.html';
+    
+    // Envía datos a MailerLite (solo funciona online)
+    ml('submit', form, {
+      onSuccess: function() {
+        console.log('Correo enviado correctamente');
+      },
+      onError: function() {
+        console.log('Error al enviar el correo');
+      }
+    });
+    return false; // evita recarga de página
+  }
+</script>
+
+</body>
+</html>
